@@ -17,14 +17,14 @@ public class RunMain {
     public static void main(String[] args) throws Exception {
 
         RunConfig config = new RunConfig();
-        config.setInputFolder("../../input_experiments");
+        config.setInputFolder("dummy_input_data");
         config.setOutPutFolder("output");
-        config.setThresholds(new double[]{0.5, 0.7, 0.9});
-        config.setInputSizes(Arrays.asList(/*2500, 5000, 10000, 25000, 50000,*/ 100000));
+        config.setThresholds(new double[]{0.7 /*,0.5, 0.9*/});
+        config.setInputSizes(Arrays.asList(10000, 100000, 25000));
         config.setBloomFilters(ArgumentsUtil.enumValues(PredefinedBloomFilter.class));
-        config.setnGramSizes(new int[]{2, 3, 4});
-        config.setDateNGramSizes(new int[]{0, 1});
-        config.setBloomfilterSizes(new int[]{128, 320, 640, 960, 1280});
+        config.setnGramSizes(new int[]{3 /*, 2, 4*/});
+        config.setDateNGramSizes(new int[]{1 /*, 0, 2*/});
+        config.setBloomfilterSizes(new int[]{128 /*, 320, 640, 960, 1280*/});
 
         Run run = new Run(config);
         run.run();
