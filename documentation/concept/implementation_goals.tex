@@ -1,0 +1,99 @@
+\section{Ziele der Implementierung}
+\label{sec:implementation}
+
+Die Hauptaufgabe des Praktikums besteht in der Realisierung des in \refnice{Abschnitt}{sec:design}
+beschriebenen Programms, sowie der Erstellung der relevanten Auswertungen.
+Die bereitzustellenden Aspekte sind dabei in Pflicht- und Optionale Bereiche aufgegliedert,
+die im folgenden beschrieben werden.
+
+\subsection{Pflicht: Vergleich verschiedener Strategien}
+
+Das im vorigen Abschnitt beschriebene Vorgehen beruht auf der Idee, dass verschiedene
+Implementierungen einer Ähnlichkeitsfunktion zur Entity-Resolution austauschbar
+in dem gleichen Workflow ausgeführt werden können.
+Um dies zu gewährleisten, wird insbesondere auch der Import der Daten durch die Ähnlichkeitsfunktion so beeinflusst,
+dass beim Import die Daten bereits in der von der verwendeten Strategie bevorzugten Datenstruktur bereitgestellt werden.
+
+\refnice{Tabelle}{fig:implementation} beschreibt alle Implementierungen von Ähnlichkeitsfunktionen, die wir im Rahmen der Aufgabe vergleichen wollen.
+Viele Ansätze sind redundant vertreten, da wir der Auffassung sind,
+dass kleine Implementierungsdetails schwer abzuschätzende Auswirkungen haben können.
+Des weiteren existieren verschiedene Implementierungen, die entweder keine oder unvollständige Berechnung ausführen.
+Die Motivation dafür besteht in der Möglichkeit, den Workflow hinsichtlich eines isolierten Aspekts zu bewerten.
+
+\begin{figure}[h!]
+\begin{tabular}{|l|}
+	\hline
+	\begin{minipage}{0.999999\textwidth}
+		\vspace*{0.1cm}
+		\textbf{Komponentenbasierte Personen-Ähnlichkeit}\\
+
+		Ähnlichkeit entspricht arithmetischem Mittel der Jaccard-Ähnlichkeiten der
+		N-Gramm-Mengen der Geburtstags-, Name-, Address-Komponenten.\\
+
+		\hspace*{-0.4cm}
+		\begin{footnotesize}
+		\begin{tabular}{l}
+			\hline
+				\textbf{\underline{konstante Abbildung auf $0$:}}\\
+				\begin{minipage}{0.999999\textwidth} Fokus: Bewertung Import + Transformation \end{minipage}\\
+			\hline
+				\textbf{\underline{Jaccard-KISS-Ähnlichkeit:}}\\
+				Fokus: Lesbarkeit\\
+			\hline
+				\textbf{\underline{Jaccard-Ähnlichkeit:}}\\
+				Fokus: Performance\\
+			\hline
+				\textbf{\underline{Dritt-Bibliothek-Bloom-Ansatz:}}\\
+				Vergleich: Eigenimplementierung vs Verbreitete\\
+			\hline
+				\textbf{\underline{Bloom-Ansatz (Eigenimplementierung):}}\\
+				Mit BitSet\\ 
+			\hline
+				\textbf{\textbf{Optional: Bloom-Ansatz (Eigenimplementierung):}}\\
+				Mit Long-Array\\ 
+			\hline
+				\textbf{\underline{Optional: Bloom-Ansatz (Eigenimplementierung):}}\\
+				Mit Boolean-Array\\ 
+		\end{tabular}
+		\end{footnotesize}
+	\end{minipage}\\
+	\hline
+	\hline
+	\begin{minipage}{0.999999\textwidth}
+		\vspace*{0.1cm}
+		\textbf{Personen-Ähnlichkeit}\\
+
+		Alle Komponenten einer Person werden in einer gemeinsamen Menge aufbewahrt, wobei die Jaccard-Ähnlichkeiten
+		dieser Menge die Ähnlichkeit der Personen entspricht. Ähnlichkeitsfunktionen haben die Bedeutung von oben.\\
+
+		\hspace*{-0.4cm}
+		\begin{footnotesize}
+		\begin{tabular}{l}
+			\hline
+				\begin{minipage}{0.999999\textwidth}konstante Abbildung auf $0$\end{minipage}\\
+			\hline
+				Jaccard-KISS-Ähnlichkeit\\
+			\hline
+				Jaccard-Ähnlichkeit\\
+			\hline
+				Dritt-Bibliothek-Bloom-Ansatz\\
+			\hline
+				Bloom-Ansatz (Eigenimplementierung)\\
+			\hline
+				Optional: Bloom-Ansatz (Eigenimplementierung)\\
+			\hline
+				Optional: Bloom-Ansatz (Eigenimplementierung)\\
+		\end{tabular}
+		\end{footnotesize}
+	\end{minipage}\\
+	\hline
+\end{tabular}
+\caption{Übersicht der zu implementierenden Ähnlichkeitsfunktionen}
+\label{fig:implementation}
+\end{figure}
+
+\subsection{Optional: Parallelisierung}
+
+\begin{itemize}
+	\item Ausführen des Workflows in Flink
+\end{itemize}

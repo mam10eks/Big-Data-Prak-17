@@ -1,0 +1,97 @@
+\documentclass{beamer}
+
+\usetheme{Warsaw}
+
+\beamertemplatenavigationsymbolsempty
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+
+\usepackage{amsmath}
+\usepackage[ruled]{algorithm2e}
+
+\useoutertheme{infolines}
+
+\resetcounteronoverlays{algocf}
+
+\usepackage{tikz}
+
+\usetikzlibrary{positioning, shapes, arrows, tikzmark, calc}
+
+\usepackage{varwidth}
+\usepackage{tikz-3dplot}
+
+\usepackage{picture}
+
+\def\stdItemSep{.5em}
+
+\def\HiLi{\leavevmode\rlap{\hbox to \hsize{\color{yellow!50}\leaders\hrule height .8\baselineskip depth .5ex\hfill}}}
+
+\newcommand{\newSectionFrame}[1]
+{
+	\begin{frame}
+		\vfill
+		\centering
+		\begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+			\usebeamerfont{title}#1\par%
+		\end{beamercolorbox}
+		\vfill
+	\end{frame}
+}
+
+\AtBeginSection[]
+{
+	\newSectionFrame{\insertsectionhead}
+}
+
+\AtBeginSubsection[]
+{
+	\newSectionFrame{\insertsubsectionhead}
+}
+
+\AtBeginSubsubsection[]
+{
+	\newSectionFrame{\insertsubsubsectionhead}
+}
+
+\title{Big Data Praktikum: ER with Bit Arrays}
+\author{Moritz Engelmann, Maik Fröbe}
+\date{31.07.2017}
+
+\parindent 0pt
+
+\newcounter{image_index_counter} 
+
+\begin{document}
+
+\begin{frame}
+	\vfill
+	\centering
+	\begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+		\usebeamerfont{title}
+		Speed up Entity Resolution with Bit Arrays\\
+		\par%
+	\end{beamercolorbox}
+	\vfill
+	\textbf{Big Data Praktikum}\\
+	\textbf{SS 17}\\
+	\vfill
+	Moritz Engelmann\\
+	Maik Fröbe
+	\vfill
+	\hspace*{5.1cm}31.07.2017
+\end{frame}
+
+\begin{frame}
+	\tableofcontents
+\end{frame}
+
+\input{01_introduction/01_introduction.tex}
+
+\input{02_er_strategies/02_er_strategies.tex}
+
+\input{03_optimizations/03_optimizations.tex}
+
+\input{outlook/outlook.tex}
+
+\end{document}

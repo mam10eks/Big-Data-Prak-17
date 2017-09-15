@@ -1,0 +1,78 @@
+\documentclass[a4paper,ngerman,twoside,BCOR1.5cm,headsepline,DIV12,appendixprefix,final,12pt]{scrartcl}
+
+\input{document.conf}
+
+%************************************************************************************************************************
+%* begin document
+%************************************************************************************************************************
+\begin{document}
+\thispagestyle{empty}
+
+\begin{center}
+\large
+
+\vspace{1cm}
+\textbf{\sffamily	Universität Leipzig\\
+			Fakultät für Mathematik und Informatik\\
+			Institut für Informatik\\}
+
+\vspace{2cm}
+{\Large\textbf{\sffamily Speed up Entity Resolution with Bit Arrays}}
+
+
+\large
+
+Big Data Praktikum
+\vspace{1cm}
+\end{center}
+
+\textbf{Einleitung}:\\
+Das Ziel des Praktikums besteht darin, durch experimentelle Auswertungen zwei Ansätze zur Entity-Resolution miteinander
+zu vergleichen.
+Der erste Vertreter ist dabei die Jaccard-Ähnlichkeit von N-Grammen.
+Dieses Vorgehen liefert gute Ergebnisse, lässt jedoch aus Sicht der Ausführungszeit insbesondere für große Datenmengen Wünsche offen.
+
+Aus diesem Grund wird die zweite Strategie auf der Basis von Bloom-Filtern realisiert.
+Bloom-Filter sind dabei Datenstrukturen, die approximativ und sehr effizient entscheiden können,
+ob ein gegebenes Element in einer Menge enthalten ist.
+Durch diese Objekte sollen damit die für die Jaccard-Ähnlichkeit notwendigen Berechnungen effizient approximiert werden.
+
+Die Hoffnung besteht dabei darin, dass dieser Ansatz möglichst wenig Genauigkeit einbüßt,
+und dabei signifikante Verbesserungen in Bezug auf die Ausführungszeit liefert.
+
+
+\vfill
+
+{\large
+\begin{tabular}{p{7cm} ll}
+&\\
+\small
+Leipzig, Mai 2017 & \small vorgelegt von\\
+				& \small Maik Fröbe & \small 2515360\\
+
+				& \small Moritz Engelmann & \small 2527532\\
+\end{tabular}}
+
+\begin{tabular}{p{7cm} l}
+&\\
+\small
+Betreuer:	& \small Ziad Sehili \\
+			& \small Fakultät für Mathematik und Informatik\\
+			& \small Abteilung Datenbanken
+\end{tabular} 
+
+\newpage
+
+\pagenumbering{arabic}
+
+%************************************************************************************************************************
+%* main sections
+%************************************************************************************************************************
+\newpage
+\input{approaches.tex}
+\newpage
+\input{design_desicions.tex}
+\newpage
+\input{implementation_goals.tex}
+
+\end{document}

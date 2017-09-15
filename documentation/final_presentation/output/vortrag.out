@@ -1,0 +1,10 @@
+\BOOKMARK [2][]{Outline0.1}{Einf\374hrung}{}% 1
+\BOOKMARK [2][]{Outline0.2}{Ans\344tze zur Entity-Resolution}{}% 2
+\BOOKMARK [3][]{Outline0.2.1.8}{Trivialer Ansatz}{Outline0.2}% 3
+\BOOKMARK [3][]{Outline0.2.2.10}{Sortier-Ansatz}{Outline0.2}% 4
+\BOOKMARK [3][]{Outline0.2.3.12}{Bit-Array-Ansatz}{Outline0.2}% 5
+\BOOKMARK [3][]{Outline0.2.4.18}{Vergleich}{Outline0.2}% 6
+\BOOKMARK [2][]{Outline0.3}{Optimierungen des Bit-Array-Ansatzes}{}% 7
+\BOOKMARK [3][]{Outline0.3.1.24}{Bit-Array als Filter}{Outline0.3}% 8
+\BOOKMARK [3][]{Outline0.3.2.36}{Filtern in 2 Phasen}{Outline0.3}% 9
+\BOOKMARK [2][]{Outline0.4}{R\374ckblick + Ausblick}{}% 10

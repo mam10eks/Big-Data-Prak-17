@@ -1,0 +1,9 @@
+\begin{thebibliography}{MG16}
+
+\bibitem[MG16]{sssj}
+Gianmarco De~Francisci Morales and Aristides Gionis.
+\newblock Streaming similarity self-join.
+\newblock {\em Proceedings of the VLDB Endowment, Vol. 9, No. 10}, 9, No.
+  10:792--803, 2016.
+
+\end{thebibliography}

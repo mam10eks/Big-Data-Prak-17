@@ -1,0 +1,94 @@
+\frametitle{Prozentsatz erfolgreicher Testdurchläufe}
+
+\newcommand{\myCell}[1]{\begin{minipage}{2cm}\vspace*{0.3cm} #1 \vspace*{0.3cm}\end{minipage}}
+
+\vspace*{-0.5cm}
+\begin{center}
+\begin{tikzpicture}
+[
+my_path/.style={->, very thick, green!75!white},
+problem_path/.style={->, very thick, red!75!white}
+]
+\node [anchor=west]
+{
+\begin{varwidth}{\linewidth}
+\begin{tabular}{|l|l|}
+\hline
+\myCell{MB} & \myCell{STR}\\
+\hline
+\hline
+\myCell{$62$ $\%$} & \myCell{$96$ $\%$}\\
+\hline
+\end{tabular}
+\end{varwidth}
+};
+\uncover<2->
+{
+\node [anchor=west] at (-3, -2.5)
+{
+\begin{varwidth}{\linewidth}
+\begin{small}
+\begin{tabular}{|l|r|}
+\hline
+Web-Spam & $100$ $\%$\\
+\hline
+Reuters Corpus& $100$ $\%$\\
+\hline
+Blogs & $25$ $\%$\\
+\hline
+Tweets & $25$ $\%$\\
+\hline
+\end{tabular}
+\end{small}
+\end{varwidth}
+};
+\draw [my_path] (0.3,-0.5) to[out=180, in=90] (-1, -1.5);
+}
+
+\uncover<3->
+{
+\node [anchor=west, align=left, color=red!75!white] at (-3, -4.5)
+{
+Ausführungszeit\\ für kleine $\tau$
+};
+\draw [problem_path] (-1.5, -4) to (0.1,-2.7);
+\draw [problem_path] (-1.5, -4) to (0.1,-3.1);
+}
+
+\uncover<4->
+{
+\node [anchor=west] at (3, -2.5)
+{
+\begin{varwidth}{\linewidth}
+\begin{small}
+\begin{tabular}{|l|r|}
+\hline
+Web-Spam & $93$ $\%$\\
+\hline
+Reuters Corpus& $98$ $\%$\\
+\hline
+Blogs & $98$ $\%$\\
+\hline
+Tweets & $97$ $\%$\\
+\hline
+\end{tabular}
+\end{small}
+\end{varwidth}
+};
+\draw [my_path] (3.7,-0.5) to[out=0, in=90] (5, -1.5);
+}
+
+\uncover<5->
+{
+\node [anchor=west, color=red!75!white] at (3,-4.5)
+{
+RAM-Verbrauch
+};
+\draw [problem_path] (5.75, -4.5) to[out=0, in=0] (6.75,-1.8);
+\draw [problem_path] (5.75, -4.5) to[out=0, in=0] (6.75,-2.25);
+\draw [problem_path] (5.75, -4.5) to[out=0, in=0] (6.75,-2.65);
+\draw [problem_path] (5.75, -4.5) to[out=0, in=0] (6.75,-3.1);
+}
+\end{tikzpicture}
+\end{center}
+

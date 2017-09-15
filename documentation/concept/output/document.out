@@ -1,0 +1,10 @@
+\BOOKMARK [1][-]{section.1}{Entity-Resolution}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Entity-Resolution mit N-Grammen}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Entity-Resolution mit N-Grammen unter Verwendung von Bloom-Filtern}{section.1}% 3
+\BOOKMARK [3][-]{subsubsection.1.2.1}{Bloom-Filter}{subsection.1.2}% 4
+\BOOKMARK [3][-]{subsubsection.1.2.2}{Einsatzszenario in der Entity-Resolution}{subsection.1.2}% 5
+\BOOKMARK [3][-]{subsubsection.1.2.3}{Gefahren beim Einsatz eines Bloom-Filters}{subsection.1.2}% 6
+\BOOKMARK [1][-]{section.2}{Vorgehen}{}% 7
+\BOOKMARK [1][-]{section.3}{Ziele der Implementierung}{}% 8
+\BOOKMARK [2][-]{subsection.3.1}{Pflicht: Vergleich verschiedener Strategien}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.2}{Optional: Parallelisierung}{section.3}% 10

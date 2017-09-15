@@ -1,0 +1,12 @@
+\beamer@endinputifotherversion {3.24pt}
+\select@language {ngerman}
+\beamer@sectionintoc {1}{Einf\IeC {\"u}hrung}{3}{0}{1}
+\beamer@sectionintoc {2}{Ans\IeC {\"a}tze zur Entity-Resolution}{7}{0}{2}
+\beamer@subsectionintoc {2}{1}{Trivialer Ansatz}{8}{0}{2}
+\beamer@subsectionintoc {2}{2}{Sortier-Ansatz}{10}{0}{2}
+\beamer@subsectionintoc {2}{3}{Bit-Array-Ansatz}{12}{0}{2}
+\beamer@subsectionintoc {2}{4}{Vergleich}{18}{0}{2}
+\beamer@sectionintoc {3}{Optimierungen des Bit-Array-Ansatzes}{23}{0}{3}
+\beamer@subsectionintoc {3}{1}{Bit-Array als Filter}{24}{0}{3}
+\beamer@subsectionintoc {3}{2}{Filtern in 2 Phasen}{36}{0}{3}
+\beamer@sectionintoc {4}{R\IeC {\"u}ckblick + Ausblick}{39}{0}{4}
